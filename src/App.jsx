@@ -2,6 +2,7 @@ import React from 'react'
 import LocomotiveScroll from 'locomotive-scroll';
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import Features from './components/Features'
 
 const App = () => {
 
@@ -11,6 +12,7 @@ const App = () => {
     <div data-scroll data-scroll-section className='w-full min-h-screen text-[#fff] font-["electro"] bg-[#031C19] overflow-hidden'>
       <Navbar></Navbar>
       <Hero></Hero>
+      <Features></Features>
     </div>
   )
 }

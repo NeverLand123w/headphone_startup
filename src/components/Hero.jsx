@@ -10,17 +10,14 @@ const Hero = () => {
     useGSAP(() => {
         const tl = gsap.timeline();
 
-
         tl.fromTo('h1',
             {
                 opacity: 0,
-                y: 50,
                 scale: 1.5,
                 filter: 'contrast(0%)',
             },
             {
                 opacity: 1,
-                y: 0,
                 scale: 1.2,
                 filter: 'contrast(0%)',
                 duration: 1,
@@ -36,15 +33,23 @@ const Hero = () => {
                 duration: 1,
                 ease: 'power3.inOut',
             }, "+=0")
+
             .from('img', {
                 y: 50,
                 opacity: 0,
                 scale: 0.8,
-                delay: 0.7,
                 duration: 1.2,
+                delay: 0.7,
                 ease: 'power3.out'
-            }, "-=1.2");
+            }, "-=1.2")
 
+            .from('.bottom > *', { // Changed this line to target children of bottom
+                opacity: 0,
+                y: 50,
+                ease: 'power3.out',
+                stagger: 0.15,
+                duration: 1,
+            }, "-=0.5"); // Adjusted the position parameter
     }, { scope: containerRef });
 
     return (
