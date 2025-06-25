@@ -1,10 +1,55 @@
-import React from 'react'
+import React, { useRef } from 'react';
+import { gsap } from 'gsap';
+import { useGSAP } from '@gsap/react';
 import heroHeadphone from '../assets/images/hero_headphone.png';
 
 const Hero = () => {
+
+    const containerRef = useRef(null);
+
+    useGSAP(() => {
+        const tl = gsap.timeline();
+
+
+        tl.fromTo('h1',
+            {
+                opacity: 0,
+                y: 50,
+                scale: 1.5,
+                filter: 'contrast(0%)',
+            },
+            {
+                opacity: 1,
+                y: 0,
+                scale: 1.2,
+                filter: 'contrast(0%)',
+                duration: 1,
+                ease: 'power2.out',
+            }
+        )
+            .to('h1', {
+                duration: 0.5,
+            })
+            .to('h1', {
+                scale: 1,
+                filter: 'contrast(100%)',
+                duration: 1,
+                ease: 'power3.inOut',
+            }, "+=0")
+            .from('img', {
+                y: 50,
+                opacity: 0,
+                scale: 0.8,
+                delay: 0.7,
+                duration: 1.2,
+                ease: 'power3.out'
+            }, "-=1.2");
+
+    }, { scope: containerRef });
+
     return (
         <div>
-            <div className="relative p-0 w-full translate-y-[4%] md:p-10">
+            <div ref={containerRef} className="relative p-0 w-full translate-y-[4%] md:p-10">
                 <div className="middle">
                     <h1 className='absolute w-full top-[1em] left-1/2 translate-x-[-50%] text-[6em] text-center font-["raleway"] font-extrabold uppercase leading-[1.2em] tracking-[0.1em]'>the wireless<br></br>headphones of<br></br>the future</h1>
                     <div className="w-full">
