@@ -54,7 +54,7 @@ const Hero = () => {
 
     return (
         <div>
-            <div ref={containerRef} className="relative p-0 w-full translate-y-[4%] md:p-10">
+            <div ref={containerRef} className="relative p-0 w-full mb-10 translate-y-[4%] md:p-10">
                 <div className="middle">
                     <h1 className='absolute w-full top-[1em] left-1/2 translate-x-[-50%] text-[6em] text-center font-["raleway"] font-extrabold uppercase leading-[1.2em] tracking-[0.1em]'>the wireless<br></br>headphones of<br></br>the future</h1>
                     <div className="w-full">

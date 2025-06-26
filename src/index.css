@@ -13,6 +13,15 @@ p{
     font-family: "inter";
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;
+}
+
 @media (max-width: 931px){
     .middle h1{
         font-size: 10vw;
