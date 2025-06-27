@@ -1,7 +1,7 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
-import ScrollTrigger from 'gsap/ScrollTrigger';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import ancImg from '../assets/images/anc.svg';
 import encImg from '../assets/images/enc.svg';
@@ -9,31 +9,24 @@ import miccImg from '../assets/images/mic_typec.svg';
 import transparencyImg from '../assets/images/transparency.svg';
 import earmuffImg from '../assets/images/earmuff.svg';
 
-// Only register plugins in browser environment
-if (typeof window !== 'undefined') {
-    gsap.registerPlugin(useGSAP, ScrollTrigger);
-}
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const Features = () => {
     const mainRef = useRef(null);
-    const panelsContainerRef = useRef(null);
 
     useGSAP(() => {
-        // Safety checks
-        if (!mainRef.current || !panelsContainerRef.current) return;
-
         const panels = gsap.utils.toArray(".panel");
+        const panelsContainer = mainRef.current.querySelector(".panels-container");
 
-        const horizontalTween = gsap.to(panelsContainerRef.current, {
-            x: () => -(panelsContainerRef.current.scrollWidth - window.innerWidth),
-            ease: "none",
+        const horizontalTween = gsap.to(panelsContainer, {
+            x: () => -(panelsContainer.scrollWidth - window.innerWidth),
+            ease: "none", 
             scrollTrigger: {
-                trigger: mainRef.current,
-                pin: true,
-                scrub: 1,
-                end: () => "+=" + (panelsContainerRef.current.scrollWidth - window.innerWidth),
+                trigger: mainRef.current, 
+                pin: true,              
+                scrub: 1,                
+                end: () => "+=" + (panelsContainer.scrollWidth - window.innerWidth),
                 invalidateOnRefresh: true,
-                markers: process.env.NODE_ENV === 'development' // shows markers in dev only
             }
         });
 
@@ -42,38 +35,20 @@ const Features = () => {
             const content = panel.querySelector('.feature-content');
             const number = panel.querySelector('.feature-number');
 
-            if (!image || !content || !number) return;
-
             gsap.timeline({
                 scrollTrigger: {
                     trigger: panel,
                     containerAnimation: horizontalTween,
-                    start: "left center",
+                    start: "left center", 
                     toggleActions: "play reverse play reverse",
                 }
             })
-                .from(number, { y: 50, opacity: 0, duration: 0.8, ease: "power2.out" })
-                .from(image, {
-                    x: i % 2 === 0 ? 100 : -100,
-                    opacity: 0,
-                    duration: 1,
-                    ease: "power2.out"
-                }, "<0.1")
-                .from(content, {
-                    y: 30,
-                    opacity: 0,
-                    duration: 0.8,
-                    ease: "power3.out"
-                }, "<0.2");
+            .from(number, { y: 50, opacity: 0, duration: 0.8, ease: "power2.out" })
+            .from(image, { x: i % 2 === 0 ? 100 : -100, opacity: 0, duration: 1, ease: "power2.out" }, "<0.1")
+            .from(content, { y: 30, opacity: 0, duration: 0.8, ease: "power3.out" }, "<0.2");
         });
 
-        // Cleanup function
-        return () => {
-            ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-            horizontalTween.kill();
-        };
-
-    }, { scope: mainRef, dependencies: [] });
+    }, { scope: mainRef });
 
     return (
         <div className='relative'>
@@ -106,7 +81,7 @@ const Features = () => {
                             </div>
                         </div>
                     </section>
-
+                    
                     <section className="panel w-screen h-full flex-shrink-0 flex items-center justify-center text-white p-8 md:p-16 lg:p-24 relative">
                         <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-12 md:gap-16 lg:gap-24 relative z-10">
                             <div className="feature-image flex justify-center items-center md:order-last">
@@ -127,7 +102,7 @@ const Features = () => {
                             </div>
                         </div>
                     </section>
-
+                    
                     <section className="panel w-screen h-full flex-shrink-0 flex items-center justify-center text-white p-8 md:p-16 lg:p-24 relative">
                         <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-12 md:gap-16 lg:gap-24 relative z-10">
                             <div className="feature-image flex justify-center items-center">
@@ -148,7 +123,7 @@ const Features = () => {
                             </div>
                         </div>
                     </section>
-
+                    
                     <section className="panel w-screen h-full flex-shrink-0 flex items-center justify-center text-white p-8 md:p-16 lg:p-24 relative">
                         <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-12 md:gap-16 lg:gap-24 relative z-10">
                             <div className="feature-image flex justify-center items-center md:order-last">
@@ -169,7 +144,7 @@ const Features = () => {
                             </div>
                         </div>
                     </section>
-
+                    
                     <section className="panel w-screen h-full flex-shrink-0 flex items-center justify-center text-white p-8 md:p-16 lg:p-24 relative">
                         <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-12 md:gap-16 lg:gap-24 relative z-10">
                             <div className="feature-image flex justify-center items-center">
