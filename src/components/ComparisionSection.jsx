@@ -1,30 +1,34 @@
 // src/components/ComparisonSection.jsx
-import { useEffect, useRef } from 'react'
+import { useRef } from 'react'
 import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useGSAP } from '@gsap/react'
+
+gsap.registerPlugin(ScrollTrigger)
 
 const ComparisonSection = () => {
-    const tableRef = useRef()
+    const container = useRef()
 
-    useEffect(() => {
-        gsap.from(tableRef.current, {
+    useGSAP(() => {
+        gsap.from('.comparison-table', {
             opacity: 0,
             y: 50,
             duration: 1,
             ease: 'power3.out',
             scrollTrigger: {
-                trigger: tableRef.current,
+                trigger: '.comparison-table',
                 start: 'top 80%',
             },
         })
-    }, [])
+    }, { scope: container })
 
     return (
-        <div>
-            <div className="bg-gradient-to-b to-[#031C19] from-gray-900 py-16 px-6 md:px-20" ref={tableRef}>
-                <h2 className="text-4xl font-bold text-center mb-10">Compare With Other Brands</h2>
+        <div ref={container}>
+            <div className="bg-gradient-to-b to-[#031C19] from-gray-700 py-16 px-6 md:px-20 comparison-table">
+                <h2 className="text-4xl font-bold text-center mb-10 font-['raleway']">Compare With Other Brands</h2>
                 <div className="overflow-x-auto">
-                    <table className="min-w-full border-collapse text-left text-sm md:text-base">
-                        <thead className="bg-gray-100">
+                    <table className="min-w-full border-collapse text-left text-sm md:text-base font-['inter']">
+                        <thead>
                             <tr>
                                 <th className="p-4 font-semibold">Features</th>
                                 <th className="p-4 font-semibold">Soniquo</th>

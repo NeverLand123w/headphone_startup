@@ -1,0 +1,21 @@
+<div className="bg-white p-6 rounded-lg shadow-md testimonial-card">
+                    <p className="text-gray-700 italic">“I was blown away by the sound clarity and battery life. Highly recommended for travelers.”</p>
+                    <div className="mt-4 flex items-center gap-4">
+                        <img src="https://i.pravatar.cc/41" alt="User" className="rounded-full w-10 h-10" />
+                        <div>
+                            <p className="font-semibold text-black">Sneha R.</p>
+                            <p className="text-sm text-gray-500">Frequent Flyer</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div className="bg-white p-6 rounded-lg shadow-md testimonial-card">
+                    <p className="text-gray-700 italic">“Looks premium, feels premium, and the price? Unreal. Soniquo is the future.”</p>
+                    <div className="mt-4 flex items-center gap-4">
+                        <img src="https://i.pravatar.cc/42" alt="User" className="rounded-full w-10 h-10" />
+                        <div>
+                            <p className="font-semibold text-black">Ravi T.</p>
+                            <p className="text-sm text-gray-500">College Student</p>
+                        </div>
+                    </div>
+                </div>

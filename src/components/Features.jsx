@@ -21,7 +21,7 @@ const Features = () => {
   const panelData = [
     {
       id: 1,
-      title: "Hybrid ANC",
+      title: "Hybrid",
       coloredWord: "ANC",
       color: "text-blue-400",
       description: "Active Noise Cancellation shuts out noise and unwanted background sound up to 32db, creating a pure, immersive soundscape.",
@@ -139,7 +139,7 @@ const Features = () => {
     <div className="relative">
       <div 
         ref={containerRef} 
-        className="relative h-screen overflow-hidden bg-gradient-to-b from-[#031C19] to-gray-900"
+        className="relative h-screen overflow-hidden bg-gradient-to-b from-[#031C19] to-gray-700"
       >
         <div 
           ref={panelsRef} 

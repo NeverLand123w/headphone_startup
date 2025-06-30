@@ -73,10 +73,10 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:flex links gap-10">
-          <p className='cursor-pointer hover:text-gray-300 transition-colors'>Product</p>
-          <p className='cursor-pointer hover:text-gray-300 transition-colors'>New Product</p>
-          <p className='cursor-pointer hover:text-gray-300 transition-colors'>Pricing</p>
-          <p className='cursor-pointer hover:text-gray-300 transition-colors'>Customer</p>
+          <p className='cursor-pointer hover:text-gray-300 transition-colors'>Features</p>
+          <p className='cursor-pointer hover:text-gray-300 transition-colors'>Compare</p>
+          <p className='cursor-pointer hover:text-gray-300 transition-colors'>Reviews</p>
+          <p className='cursor-pointer hover:text-gray-300 transition-colors'>FAQ</p>
         </div>
 
         <div className="hidden md:block button">
