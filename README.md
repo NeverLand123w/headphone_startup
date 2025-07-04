@@ -3,38 +3,33 @@
 
 This is my headphone startup company website built using React, Tailwind CSS, GSAP, and Locomotive Scroll to deliver smooth animations and a highly engaging user experience.
 ## ✨ Features
-⚛️ Built with React – component-based structure for scalability
+  ⚛️ Built with React – component-based structure for scalability
 
-🎨 Tailwind CSS – clean, utility-first styling for rapid UI development
+  🎨 Tailwind CSS – clean, utility-first styling for rapid UI development
 
-📱 Fully mobile responsive – optimized for all screen sizes
+  📱 Fully mobile responsive – optimized for all screen sizes
 
-🎞️ GSAP Animations – smooth, elegant transitions and animations
+  🎞️ GSAP Animations – smooth, elegant transitions and animations
 
-🌀 Locomotive Scroll – modern scroll-based animations and effects
+  🌀 Locomotive Scroll – modern scroll-based animations and effects
 
-🌙 Minimal & modern design – aesthetic UI that’s soothing to the eyes
+  🌙 Minimal & modern design – aesthetic UI that’s soothing to the eyes
 
 ## 🖼️ Live Demo
 
-https://headphone-startup.vercel.app/
+  https://headphone-startup.vercel.app/
 
-[Walkthrough Video](https://headphone-startup.vercel.app/startup%20(1).mp4)
+  [Walkthrough Video](https://headphone-startup.vercel.app/startup%20(1).mp4)
 ## 🛠️ Tech Stack
-React
+  React
 
-Tailwind CSS
+  Tailwind CSS
+  
+  GSAP (GreenSock Animation Platform)
 
-GSAP (GreenSock Animation Platform)
-
-Locomotive Scroll
+  Locomotive Scroll
 ## 📸 Preview
 ![Image](https://headphone-startup.vercel.app/startup.png)
-## 🧑‍💻 Getting Started
-
-To deploy this project run
-
-```bash
 git clone https://github.com/NeverLand123w/headphone_startup.git
 cd your-portfolio
 npm install
