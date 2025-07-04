@@ -35,7 +35,7 @@ Locomotive Scroll
 To deploy this project run
 
 ```bash
-git clone https://github.com/your-username/your-portfolio.git
+git clone https://github.com/NeverLand123w/headphone_startup.git
 cd your-portfolio
 npm install
 npm run dev
