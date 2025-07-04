@@ -1,7 +1,7 @@
 
 # 🚀 Startup Website
 
-This is my personal portfolio website built using React, Tailwind CSS, GSAP, and Locomotive Scroll to deliver smooth animations and a highly engaging user experience.
+This is my headphone startup company website built using React, Tailwind CSS, GSAP, and Locomotive Scroll to deliver smooth animations and a highly engaging user experience.
 ## ✨ Features
 ⚛️ Built with React – component-based structure for scalability
 
