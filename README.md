@@ -1,5 +1,5 @@
 
-# 🚀 Personal Portfolio Website
+# 🚀 Startup Website
 
 This is my personal portfolio website built using React, Tailwind CSS, GSAP, and Locomotive Scroll to deliver smooth animations and a highly engaging user experience.
 ## ✨ Features
