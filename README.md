@@ -1,12 +1,43 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🚀 Personal Portfolio Website
 
-Currently, two official plugins are available:
+This is my personal portfolio website built using React, Tailwind CSS, GSAP, and Locomotive Scroll to deliver smooth animations and a highly engaging user experience.
+## ✨ Features
+⚛️ Built with React – component-based structure for scalability
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🎨 Tailwind CSS – clean, utility-first styling for rapid UI development
 
-## Expanding the ESLint configuration
+📱 Fully mobile responsive – optimized for all screen sizes
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🎞️ GSAP Animations – smooth, elegant transitions and animations
+
+🌀 Locomotive Scroll – modern scroll-based animations and effects
+
+🌙 Minimal & modern design – aesthetic UI that’s soothing to the eyes
+
+## 🖼️ Live Demo
+
+https://headphone-startup.vercel.app/
+
+[Walkthrough Video](https://headphone-startup.vercel.app/startup%20(1).mp4)
+## 🛠️ Tech Stack
+React
+
+Tailwind CSS
+
+GSAP (GreenSock Animation Platform)
+
+Locomotive Scroll
+## 📸 Preview
+![Image](https://headphone-startup.vercel.app/startup.png)
+## 🧑‍💻 Getting Started
+
+To deploy this project run
+
+```bash
+git clone https://github.com/your-username/your-portfolio.git
+cd your-portfolio
+npm install
+npm run dev
+```
+
